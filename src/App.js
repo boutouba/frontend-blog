@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col, Button } from "reactstrap";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Post from "./components/Post";
+import Header from "./components/Header";
+import SideCard from "./components/SideCard";
+import Table from "./components/table/Table";
+import NoPage from "./components/NoPage/NoPage";
+import AddUser from "./components/addUserForm/AddUser";
+import Layout from "./components/Layout/Layout";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+const App = () => (
+  <>
+  <Header />
+  <BrowserRouter>
+    <Routes>
+        <Route exact path="/" element={<Table/>}/>
+        <Route exact path="/add-user" element={<AddUser/>}/>
+        <Route path="*" element={<NoPage/>}/>
+    </Routes>
+  </BrowserRouter>
+  </>
+);
 
 export default App;
