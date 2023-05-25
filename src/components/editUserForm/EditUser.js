@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const AddUser = () => {
+const EditUser = () => {
     return (
         <div class="container">
-            <h1 class="mt-4">Add User</h1>
+            <h1 class="mt-4">Edit User</h1>
             <Form>
               <FormGroup>
                 <Label for="exampleEmail">
@@ -159,4 +159,4 @@ const AddUser = () => {
     )
 }
 
-export default AddUser;
+export default EditUser;
